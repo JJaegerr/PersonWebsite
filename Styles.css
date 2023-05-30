@@ -34,8 +34,13 @@ nav {
     padding-top: 0.4em; 
 }
 
-.Menu:hover {
-    font-weight:bolder; 
+a {
+    color: #FFFFFF; 
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight:bold; 
 }
 
 .MenuCurrent {
@@ -119,6 +124,36 @@ p {background-color: yellow;}
     width: calc(100% - 4.4% - 15px);
     height: 100%;
 }
+
+.ContainerAddress {
+    float: left; 
+    margin: auto 2.5% auto 2.5%; 
+    width: calc(30% - 4.4% - 15px);
+}
+
+.ContainerContactForm {
+    float: right; 
+    background-color: #FEAA2B;
+    margin: 2% 2.2% 3% 2.2%; 
+    height: 300px;   
+    width: 67.5%;
+    position: relative
+}
+
+#VerticalBorderContactForm {
+    border-left: 5px solid green;
+    position: absolute;
+    top: 30px;
+    bottom: 0px;
+}
+
+#HorizontalBorderContactForm {
+    border-top: 5px solid blue;
+    position: absolute;
+    right: 45px;
+    left: 0;
+}
+
 
 .UnderlineTitle {
     background-color: #FF810D;
