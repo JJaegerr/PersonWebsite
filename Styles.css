@@ -408,7 +408,8 @@ input[type=senden]:hover {
     }
 
     .Profilbild img {
-        width: 100%; 
+        width: 90%; 
+        margin: 0 5% 0 5%;  
     }
     
     img, video {
@@ -453,7 +454,7 @@ input[type=senden]:hover {
     }
 }
 
-@media (max-width: 1024px)
+@media (min-width:769px) and (max-width: 1024px)
 {
     .Profilbild img {
         width: 14em; 
@@ -474,7 +475,6 @@ input[type=senden]:hover {
     .ContainerAddress {
         margin: 0;
     }
-
     
     .ContainerContactForm {
         background-color: #FEAA2B;
