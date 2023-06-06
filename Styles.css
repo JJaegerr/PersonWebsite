@@ -359,12 +359,7 @@ input[type=senden]:hover {
     }
 
     nav {
-        display: flex; 
-        background-color: #FEAA2B;
-        width: 100%;
-        height: 2em;
         justify-content: center;
-        text-align: center; 
         margin: 0 0 0 0;
     }
 
@@ -376,16 +371,8 @@ input[type=senden]:hover {
     
     .MenuCurrent {
         border: none; 
-        background-color: #FF810D;
         width: 6em;
         padding: 0.4em;
-    }
-
-    h1 {
-        font-size: 2em; 
-        font-family: Aldrich, sans-serif;
-        font-weight: lighter; 
-        margin-left: 3%;
     }
 
     .ContainerBigSmall {
@@ -430,27 +417,21 @@ input[type=senden]:hover {
     }
     
     .ContainerContactForm {
-        background-color: #FEAA2B;
         margin: 1.5% 5% 3% 5%; 
         width: 90%;
         height: 350px;   
-        position: relative;
-        padding: 2%; 
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .ContainerAddress {
-        margin: 0 5% 4% 5%; 
+        margin: 0 0 4% 0; 
         width: 90%;
     }
     
     .UnderlineAddress {
-        background-color: #FEAA2B;
-        height: 3px; 
         width: 13em;
-        margin-top: 3px;
     }
 }
 
@@ -461,7 +442,6 @@ input[type=senden]:hover {
     }
     
     img, video {
-        float: right; 
         width: 20em; 
     }
 
