@@ -43,7 +43,7 @@ nav {
     height: 2em;
     justify-content: right;
     text-align: center; 
-    margin: 2.5em 0 0 0;
+    margin: 1.7% 0 0 0;
 }
 
 .Menu {
@@ -95,7 +95,7 @@ a:hover {
     background: #FF810D;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -1px;
     height: 5px;
     width: 64px;
 }
@@ -120,16 +120,16 @@ a:hover {
 }
 
 .Profilbild img {
-    width: 50vh; 
+    width: 18em; 
 }
 
 img, video {
     float: right; 
-    width: 75vh; 
+    width: 25em; 
 }
 
 .ContainerSkills {
-    margin: 0 4% 0 calc(3% + 15px);
+    margin: 3.3% 4% 0 calc(3% + 15px);
 }
 
 ul {
@@ -145,7 +145,7 @@ li::before {
     margin: 0 5px 2px 0;
   }
 
-  .ContainerContact {
+.ContainerContact {
     display: grid;
     column-count: 2; 
     grid-template-columns: 20% 60%;
@@ -157,6 +157,13 @@ li::before {
     margin: auto 0 auto 15px; 
     width: calc(100% - 6% - 15px);
     padding: 5px; 
+}
+
+.UnderlineAddress {
+    background-color: #FEAA2B;
+    height: 3px; 
+    width: 8em;
+    margin-top: 3px;
 }
 
 .ContainerContactForm {
@@ -176,7 +183,7 @@ li::before {
     background: #FF810D;
     position: absolute;
     bottom: -1.2em;
-    right: -2.75%;
+    right: -1em;
     height: 35%;
     width: 5px;
 }
@@ -186,7 +193,7 @@ li::before {
     background: #FF810D;
     position: absolute;
     bottom: -1.2em;
-    right: -2.75%;
+    right: -1em;
     height: 5px;
     width: 53.5%;
 }
@@ -243,7 +250,7 @@ input[name=nachname] {
 }
 
 textarea {
-    height: 45%;  
+    height: calc(60% - 3em);  
     resize: none;
 }
 
@@ -277,6 +284,7 @@ input::placeholder, textarea::placeholder {
     width: calc(7em - 7px);
     margin: auto calc(3% + 6px) 2.5% auto; 
     margin-top: minmax(2.5%, auto);
+    margin-bottom: minmax(0.5%, 2.5%);
     position: relative;
 }
 
@@ -344,29 +352,147 @@ input[type=senden]:hover {
 
 @media (max-width: 768px)
 {
-    nav {
-        background-color: #FEAA2B;
-        width: 10%;
-        height: 2em;
-        margin: 2.5em 0 0 0;
+    body {
+        margin-top: 0px; 
+        margin-right: 0px;
+        font-size: smaller;
     }
-    
+
+    nav {
+        display: flex; 
+        background-color: #FEAA2B;
+        width: 100%;
+        height: 2em;
+        justify-content: center;
+        text-align: center; 
+        margin: 0 0 0 0;
+    }
+
     .Menu {
-        border-left: solid #252525 5px;
+        border: none; 
         width: 6em;
-        padding-top: 0.4em; 
+        padding: 0.4em;
     }
     
     .MenuCurrent {
-        border-left: solid #252525 5px;
+        border: none; 
         background-color: #FF810D;
         width: 6em;
-        padding-top: 0.4em; 
+        padding: 0.4em;
+    }
+
+    h1 {
+        font-size: 2em; 
+        font-family: Aldrich, sans-serif;
+        font-weight: lighter; 
+        margin-left: 3%;
+    }
+
+    .ContainerBigSmall {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 4% 5% 7.5% 5%; 
+    } 
+    
+    .ContainerSmallBig {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 4% 5% 7.5% 5%; 
+    }
+
+    .ContainerSkills {
+        width: 90%;
+        margin: 4% 5% 0 5%; 
+    }
+
+    .Profilbild img {
+        width: 100%; 
+    }
+    
+    img, video {
+        float: none; 
+        width: 90%; 
+        margin: 0 5% 0 5%;  
+    }
+
+    .MediaOrder {
+        order: 2; 
+    }
+
+    .ContainerContact {
+        display: flex;
+        flex-direction: column; 
+        width: 90%;
+        margin: 3.5% 5% 0 5%; 
+    }
+    
+    .ContainerContactForm {
+        background-color: #FEAA2B;
+        margin: 1.5% 5% 3% 5%; 
+        width: 90%;
+        height: 350px;   
+        position: relative;
+        padding: 2%; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ContainerAddress {
+        margin: 0 5% 4% 5%; 
+        width: 90%;
+    }
+    
+    .UnderlineAddress {
+        background-color: #FEAA2B;
+        height: 3px; 
+        width: 13em;
+        margin-top: 3px;
     }
 }
 
 @media (max-width: 1024px)
 {
+    .Profilbild img {
+        width: 14em; 
+    }
+    
+    img, video {
+        float: right; 
+        width: 20em; 
+    }
 
+    .ContainerContact {
+        display: flex;
+        flex-direction: column; 
+        width: 90%;
+        margin: 3.5% 5% 0 5%; 
+    }
+
+    .ContainerAddress {
+        margin: 0;
+    }
+
+    
+    .ContainerContactForm {
+        background-color: #FEAA2B;
+        margin: 1.5% 5% 3% 5%; 
+        width: 90%;
+        height: 350px;   
+        position: relative;
+        padding: 2%; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .UnderlineAddress {
+        background-color: #FEAA2B;
+        height: 3px; 
+        width: 13em;
+        margin-top: 3px;
+    }
     
 }
