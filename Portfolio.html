@@ -15,8 +15,8 @@
 <body>
     <nav>
         <div class="Menu"><a href="index.html">Über mich</a></div>
-        <div class="Menu">Fähigkeiten</div>
-        <div class="Menu"><a href="Portfolio.html">Portfolio</a></div>
+        <div class="Menu"><a href="Skills.html">Fähigkeiten</a></div>
+        <div class="MenuCurrent">Portfolio</div>
         <div class="Menu"><a href="Contact.html">Kontakt</a></div>
     </nav>
     <h1>Portfolio
@@ -31,29 +31,46 @@
     </div>
     <div class="ContainerBigSmall">
         <div>
-        <h2>Arbeitsprobe1
+        <h2>Demonstration XML-Parser
             <div class="UnderlineSubtitle"></div>
         </h2>
-        <p>Lorem Ipsum
-                ajksdflajsdkfa
-                fjlasdjflasf
-                ajsdflkajsldfjalsdfj
+        <p>Es hat bereits mehrere Fälle gegeben, in denen jemand eine XML-Datei,
+            die dazu benötigt wird, um unsere Software für die Brennöfen aktuell zu halten, bearbeitet hat und dabei beispielsweise ein 
+            falsches Datumformat oder eine ungültige Bezeichnung eines Tags verwendet hat, und das hat letztendlich den ganzen Updateprozess
+            der Software lahmgelegt. Also habe ich jetzt den Auftrag bekommen, einen Parser zu schreiben, der erst überprüft, ob das XML-File
+            tatsächlich valide ist oder ob sich darin noch Fehler befinden, bevor man dieses hochladen kann. Wir haben uns dazu entschieden, 
+            dass ich dies in Python mache und die Eingabe der XML-Datei sowie die Fehlerausgabe, oder sollte es keine Fehler mehr haben die Meldung,
+            dass das File valide ist, über die Command Line erfolgen soll.
         </p>
         </div>
-        <div class="img1"><img class="img" src="Pfp.png" alt="Bild von mir"/></div>
+        <div><video src="DemonstrationXMLParser.mp4" alt="Demonstration zum XML-Parser" controls/></div>
     </div>
     <div class="ContainerSmallBig"> 
-        <div class="img2"><img src="Pfp.png" alt="Bild von mir"/></div>
+        <div><img src="CodeSnippet.png" alt="Code Ausschnitt vom XML-Parser"/></div>
         <div>
-            <h2>Arbeitsprobe2
+            <h2>Codeausschnitt XML-Parser
                 <div class="UnderlineSubtitle"></div>
             </h2>
-            <p>Lorem Ipsum
-                    ajksdflajsdkfa
-                    fjlasdjflasf
-                    ajsdflkajsldfjalsdfj
+            <p>Hier ist ein Ausschnitt des Codes für das Parsen des XML-Files. Der Ausschnitt zeigt, wie jweils das Kind-Element aus dem 
+                ChildEintrag-tag geholt wird und überprüft wird, ob die Bezeichnung gültig und an der richtigen Stelle ist,
+                sowie ob das Kind-Element weitere Kind-Elemente besitzt. Falls etwas nicht den Vorgaben entsprechen sollte, 
+                so wird direkt eine entsprechende Fehlermeldung ausgegeben, dazu werden die tatsächlichen Tag-Namen aus dem XML genommen, 
+                selbst wenn diese falsch sein sollten, und die Anzahl der Fehler wird angepasst. Der Fehlerzähler wird unter anderem benötigt,
+                um am Ende überprüfen zu können, ob das File nun valide ist oder es nicht gültig ist. 
             </p>
             </div>
     </div>
+    <div class="ContainerBigSmall">
+        <div>
+        <h2>Konzept XML-Parser
+            <div class="UnderlineSubtitle"></div>
+        </h2>
+        <p>Auf dem vollständigen Konzept, dem dieser Ausschnitt entstammt, basiert der Code und somit auch die ganze Applikation. 
+            Das Konzept ist in Deutsch gehalten, während der Code so weit wie möglich auf Englisch ist. "Eintrag-Tag" aus dem Konzept würde 
+            beispielsweise dem "ChildEintrag"-Element aus dem Code entsprechen. 
+        </p>
+        </div>
+        <div><img src="Konzept.png" alt="Konzept zum XML-Parser"/></div>
+    </div>
 </body>
-</html>
+</html> 

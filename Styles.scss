@@ -1,9 +1,13 @@
+$white: #FFFFFF;
+$gray: #252525;
+$lightOrange: #FEAA2B;
+$darkOrange: #FF810D;
+
 html {
     background-color: #252525;
-    color: #FFFFFF;
+    color: $white;
     font-family: 'Blinker', sans-serif;
     font-weight: lighter;
-
 }   
 
 body {
@@ -23,22 +27,9 @@ h2 {
     margin-top: 5px; 
 }
 
-.UnderlineTitle {
-    background-color: #FF810D;
-    height: 4px;
-    width: 7em; 
-}
-
-.UnderlineSubtitle {
-    background-color: #FEAA2B;
-    height: 3px; 
-    width: 13em;
-    margin-top: 3px;
-}
-
 nav {
     display: flex;
-    background-color: #FEAA2B;
+    background-color: $lightOrange;
     width: 100%;
     height: 2em;
     justify-content: right;
@@ -47,20 +38,13 @@ nav {
 }
 
 .Menu {
-    border-left: solid #252525 5px;
-    width: 6em;
-    padding-top: 0.4em; 
-}
-
-.MenuCurrent {
-    border-left: solid #252525 5px;
-    background-color: #FF810D;
+    border-left: solid $gray 5px;
     width: 6em;
     padding-top: 0.4em; 
 }
 
 a {
-    color: #FFFFFF; 
+    color: $white; 
     text-decoration: none;
 }
 
@@ -68,11 +52,19 @@ a:hover {
     font-weight:bold; 
 }
 
+.MenuCurrent {
+    border-left: solid $gray 5px;
+    background-color: $darkOrange;
+    width: 6em;
+    padding-top: 0.4em; 
+}
+
+
 .SummaryContainer {
     margin: 2% 4% 3% 3%; 
     height: minmax(3.5em, auto);  
-    border-left: solid #FF810D 5px;
-    border-right: solid #FF810D 5px; 
+    border-left: solid $darkOrange 5px;
+    border-right: solid $darkOrange 5px; 
 }
 
 .SummaryText{
@@ -82,7 +74,7 @@ a:hover {
 
 .SummaryText:before {
     content: "";
-    background: #FF810D;
+    background: $darkOrange;
     position: absolute;
     top: 0px;
     right: -1px;
@@ -92,12 +84,16 @@ a:hover {
 
 .SummaryText:after {
     content: "";
-    background: #FF810D;
+    background: $darkOrange;
     position: absolute;
     bottom: 0;
     left: 0;
     height: 5px;
     width: 64px;
+}
+
+.ContainerSkills {
+    margin: 0 4% 0 calc(3% + 15px);
 }
 
 .ContainerBigSmall {
@@ -108,6 +104,11 @@ a:hover {
     margin: 1.5% 4% 0 calc(3% + 15px); 
     width: calc(100% - 7% - 20px);
     height: 100%;
+
+    img, video {
+        float: right; 
+        width: 75vh; 
+    }
 } 
 
 .ContainerSmallBig {
@@ -119,17 +120,91 @@ a:hover {
     height: 100%;
 }
 
-.Profilbild img {
-    width: 50vh; 
+.ContainerContact {
+    display: grid;
+    column-count: 2; 
+    grid-template-columns: 20% 60%;
+    column-gap: calc(20% - 5.7% - 4px);
+    margin: 2% 4% 2% 3%;
 }
 
-img, video {
-    float: right; 
-    width: 75vh; 
+
+.ContainerAddress {
+    margin: auto 0 auto 15px; 
+    width: calc(100% - 6% - 15px);
+    padding: 5px; 
 }
 
-.ContainerSkills {
-    margin: 0 4% 0 calc(3% + 15px);
+.ContainerContactForm {
+    background-color: $lightOrange;
+    margin: 1.5% 2.7% 3% 3%; 
+    height: 150%;   
+    width: 100%;
+    position: relative;
+    padding: 2%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.KontaktTitel {
+    margin-left: 5%;
+    position: relative;
+}
+
+.ContainerContactForm:before {
+    content: "";
+    background: $darkOrange;
+    position: absolute;
+    bottom: -1.2em;
+    right: -2.75%;
+    height: 35%;
+    width: 5px;
+}
+
+.ContainerContactForm:after {
+    content: "";
+    background: $darkOrange;
+    position: absolute;
+    bottom: -1.2em;
+    right: -2.75%;
+    height: 5px;
+    width: 53.5%;
+}
+
+
+.KontaktTitel:before {
+    content: "";
+    background: $darkOrange;
+    position: absolute;
+    top: 1.2em;
+    left: -5.5%;
+    height: 315%;
+    width: 5px;
+}
+
+.KontaktTitel:after {
+    content: "";
+    background: $darkOrange;
+    position: absolute;
+    top: 1.2em;
+    left: -5.5%;
+    height: 5px;
+    width: 53.5%;
+}
+
+
+.UnderlineTitle {
+    background-color: $darkOrange;
+    height: 4px;
+    width: 7em; 
+}
+
+.UnderlineSubtitle {
+    background-color: $lightOrange;
+    height: 3px; 
+    width: 13em;
+    margin-top: 3px;
 }
 
 ul {
@@ -141,87 +216,22 @@ li::before {
     display: inline-block;
     width: 0.4em;
     height: 0.4em;
-    background-color:#FEAA2B;
+    background-color: $lightOrange;
     margin: 0 5px 2px 0;
   }
 
-  .ContainerContact {
-    display: grid;
-    column-count: 2; 
-    grid-template-columns: 20% 60%;
-    column-gap: calc(20% - 5.7% - 4px);
-    margin: 2% 4% 2% 3%;
-}
 
-.ContainerAddress {
-    margin: auto 0 auto 15px; 
-    width: calc(100% - 6% - 15px);
-    padding: 5px; 
-}
-
-.ContainerContactForm {
-    background-color: #FEAA2B;
-    margin: 1.5% 2.7% 3% 3%; 
-    height: 150%;   
+img {
     width: 100%;
-    position: relative;
-    padding: 2%; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.ContainerContactForm:before {
-    content: "";
-    background: #FF810D;
-    position: absolute;
-    bottom: -1.2em;
-    right: -2.75%;
-    height: 35%;
-    width: 5px;
-}
-
-.ContainerContactForm:after {
-    content: "";
-    background: #FF810D;
-    position: absolute;
-    bottom: -1.2em;
-    right: -2.75%;
-    height: 5px;
-    width: 53.5%;
-}
-
-.KontaktTitel {
-    margin-left: 5%;
-    position: relative;
-}
-
-.KontaktTitel:before {
-    content: "";
-    background: #FF810D;
-    position: absolute;
-    top: 1.2em;
-    left: -5.5%;
-    height: 315%;
-    width: 5px;
-}
-
-.KontaktTitel:after {
-    content: "";
-    background: #FF810D;
-    position: absolute;
-    top: 1.2em;
-    left: -5.5%;
-    height: 5px;
-    width: 53.5%;
+    margin-left: none; 
 }
 
 input, textarea {
     width: 94%; 
-    color: white;
+    color: $white;
     font-family: Blinker, sans-serif;
     font-size: 1em; 
-    background-color: #FEAA2B;
+    background-color: $lightOrange;
     border: none; 
     margin: 20px 3% 0 3%; 
 }
@@ -248,26 +258,32 @@ textarea {
 }
 
 input::placeholder, textarea::placeholder {
-    color: white; 
+    color: $white; 
+}
+
+input[name=nachricht]::placeholder {
+    position: absolute; 
+    top: 0; 
+    padding-top: 5px; 
 }
 
 .UnderlineVorname {
     float: left; 
-    background-color: #FFFFFF;
+    background-color: $white;
     height: 3px; 
     width: 45%;
     margin: 3px 4% 0 0;  
 }
 .UnderlineNachname {
     float: right; 
-    background-color: #FFFFFF;
+    background-color: $white;
     height: 3px; 
     width: 45%;
     margin: 3px 1% 0 0;  
 }
 
 .UnderlineInput {
-    background-color: #FFFFFF;
+    background-color: $white;
     height: 3px; 
     width: 93%;
     margin: 3px 1% 0 0;  
@@ -280,54 +296,14 @@ input::placeholder, textarea::placeholder {
     position: relative;
 }
 
-.SendenContainerSides:before {
-    content: "";
-    background: #FFFFFF;
-    position: absolute;
-    top: -2px;
-    left: -7px;
-    height: 45%;
-    width: 3px;
-}
-
-.SendenContainerSides:after {
-    content: "";
-    background: #FFFFFF;
-    position: absolute;
-    bottom: -5px;
-    right: -1px;
-    height: 45%;
-    width: 3px;
-}
-
 .SendenContainerTopBottom {
     width: calc(100% - 6px);
     position: relative;
 }
 
-.SendenContainerTopBottom:before {
-    content: "";
-    background: #FFFFFF;
-    position: absolute;
-    top: -5px;
-    left: -7px;
-    height: 3px;
-    width: 45%;
-}
-
-.SendenContainerTopBottom:after {
-    content: "";
-    background: #FFFFFF;
-    position: absolute;
-    bottom: -5px;
-    right: -4px;
-    height: 3px;
-    width: 45%;
-}
-
 input[type=senden] {
     width: calc(100% - 2em - 6px); 
-    background-color: #FEAA2B;
+    background-color: $lightOrange;
     margin: 0; 
     padding: 0.8em 1.2em 0.8em 1.2em;
     text-align: center; 
@@ -338,35 +314,60 @@ input[type=senden] {
   }
   
 input[type=senden]:hover {
-    background-color: #FF810D;
+    background-color: $darkOrange;
   }
+
+.SendenContainerSides:before {
+    content: "";
+    background: $white;
+    position: absolute;
+    top: -2px;
+    left: -7px;
+    height: 45%;
+    width: 3px;
+}
+
+.SendenContainerTopBottom:before {
+    content: "";
+    background: $white;
+    position: absolute;
+    top: -5px;
+    left: -7px;
+    height: 3px;
+    width: 45%;
+}
+
+.SendenContainerSides:after {
+    content: "";
+    background: $white;
+    position: absolute;
+    bottom: -5px;
+    right: -1px;
+    height: 45%;
+    width: 3px;
+}
+
+.SendenContainerTopBottom:after {
+    content: "";
+    background: $white;
+    position: absolute;
+    bottom: -5px;
+    right: -4px;
+    height: 3px;
+    width: 45%;
+}
 
 
 @media (max-width: 768px)
 {
-    nav {
-        background-color: #FEAA2B;
-        width: 10%;
-        height: 2em;
-        margin: 2.5em 0 0 0;
-    }
-    
-    .Menu {
-        border-left: solid #252525 5px;
-        width: 6em;
-        padding-top: 0.4em; 
-    }
-    
-    .MenuCurrent {
-        border-left: solid #252525 5px;
-        background-color: #FF810D;
-        width: 6em;
-        padding-top: 0.4em; 
-    }
+
+
+
 }
 
 @media (max-width: 1024px)
 {
 
-    
+
+
 }
