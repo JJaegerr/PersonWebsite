@@ -476,23 +476,16 @@ input[type=senden]:hover {
         margin: 0;
     }
     
-    .ContainerContactForm {
-        background-color: #FEAA2B;
-        margin: 1.5% 5% 3% 5%; 
+    .ContainerContactForm { 
         width: 90%;
         height: 350px;   
-        position: relative;
-        padding: 2%; 
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .UnderlineAddress {
-        background-color: #FEAA2B;
-        height: 3px; 
         width: 13em;
-        margin-top: 3px;
     }
     
 }
